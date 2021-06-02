@@ -21,5 +21,5 @@ def windChill():
     except NameError as e:
         print(e)
 
-#Call the function windChill() to get the value
+#Call the function windChill() to find the value
 windChill()    
