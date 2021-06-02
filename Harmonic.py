@@ -5,11 +5,11 @@
 '''
 from fractions import Fraction
 try:
+    index=1
+    harmonic=1
     number=int(input("Enter the power of N"))
+    for index in range(1,number+1):
+        harmonic+=Fraction(1/index)
+    print(harmonic)
 except ValueError:
     print("Wrong Number")
-N=1
-harmonic=1
-for N in range(1,number+1):
-    harmonic+=Fraction(1/N)
-print(harmonic)
