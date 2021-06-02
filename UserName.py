@@ -6,9 +6,11 @@
 
 try:
     username=input("Enter Your UserName:")
+    if len(username) < 3:
+        print("Username should have minimum of 3 characters")
+    else:
+        print("Hello", username, "How are you?")
+
 except ValueError:
     print("Wrong. Please Enter the correct UserName....")
-if len(username) < 3:
-    print("Username should have minimum of 3 characters")
-else:
-    print("Hello", username, "How are you?")
+
