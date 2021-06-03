@@ -38,5 +38,9 @@ try:
 except NameError as e:
     print(e)
 
-#Call the function to print the output
+"""
+A function to create the gambler problem where the gambler will bet and the function will print the number of times the gambler won.
+Parameter:
+Here count and win are the parameters taken.
+"""
 gambler()
