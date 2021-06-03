@@ -28,9 +28,8 @@ def player(board_position, attempt, index):
         if(attempt == 'o'):
             print('Player ' + attempt + ', Enter your postion number ')
         if(attempt=='x'):
-            pos=r.randint(0,9)
-            pos=pos(int)
-            pos=board_position
+            attempt=r.choice(board_position)
+            
 
     except ValueError:
         print("Enter a correct position")
