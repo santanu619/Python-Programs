@@ -11,16 +11,20 @@ begin_time=0
 end_time=0
 
 #Define the function to print the elapsed time in  stop watch
-try:
-    def stopWatch():
+def stopWatch():
+    try:
         begin_time = input("Press enter to start the watch")
         begin_time=time.time()
         end_time = input("Stop the watch")
         end_time=time.time()
         elapsedtime = end_time - begin_time
         print(elapsedtime)   
-except ValueError:
-    print("Please enter the correct input")
+    except ValueError:
+        print("Please enter the correct input")
 
-#Call the function stopwatch() to calculate and print the elapsed time
+"""
+A function to calculate the elapsed time in a stop watch.
+Parameter:
+begin_time and end_time are taken as parameters.
+"""
 stopWatch()
