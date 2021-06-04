@@ -1,0 +1,22 @@
+{
+    "Google":{
+        "Number of Shares":200,
+        "share_price":100
+    },
+    "Amazon":{
+        "Number of Shares":150,
+        "share_price":100
+    },
+    "Microsoft":{
+        "Number of Shares":150,
+        "share_price":150
+    },
+    "Flipkart":{
+        "Number of Shares":250,
+        "share_price":120
+    },
+  "SBI": {
+    "Number of Shares": 200,
+    "share_price": 200
+  }
+}
