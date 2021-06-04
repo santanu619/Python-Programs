@@ -1,0 +1,24 @@
+{
+       "addressbook": [
+              {
+                     "First_Name": "Santanu",
+                     "Last_Name": "Mohapatra",
+                     "Address": "Block-C, Chandrama Complex",
+                     "City": "Bhubaneswar",
+                     "State": "Odisha",
+                     "Zip": "751001",
+                     "Phone_Number": "6294476694",
+		     "Email": "mohapatra.santanu123@gmail.com"
+              },
+              {
+                      "First_Name": "Sasmita",
+                     "Last_Name": "Dash",
+                     "Address": "Block-C, Chandrama Complex",
+                     "City": "Bhubaneswar",
+                     "State": "Odisha",
+                     "Zip": "751001",
+                     "Phone_Number": "9437061188",
+		     "Email": "dash.sasmita1976@gmail.com"
+              }
+       ] 
+}
