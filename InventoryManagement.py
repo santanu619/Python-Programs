@@ -9,7 +9,11 @@
 import json
 import os
 import logging
+from decouple import config
 
+#Use logger handler
+logging.basicConfig(filename='Inventory_management.log', level=logging.CRITICAL, format='%(asctime)s-%(levelname)s-%(message)s')
+FILE_NAME=config('Inventory_Management')
 #Set environment variables
 USERNAME = input("Enter the username to proceed:\n")
 os.environ['INVENTORY_MANAGER'] = USERNAME
@@ -37,7 +41,7 @@ class Inventory:
             with open(r"C:\Users\SANTANU\Basic Core Programs\JSON Files\Inventory.json", "r") as file:     
                 data = json.load(file)
         except Exception as e:
-            print("Unable To Open and Read The File:",e)
+            logging.critical(e)
 
         rice_list=data['rice']
         for rice_total in range(len(rice_list)):
@@ -61,15 +65,11 @@ class Inventory:
         else:
             print("Wrong Username and Password")
         try:
-            #Call the file logger handling
-            logging.basicConfig(filename='Next_Inventory.json', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
-            logging.warning("This will get logged to a file")
-
             #Writing to Json File
             with open(r"C:\Users\SANTANU\Basic Core Programs\JSON Files\Next_Inventory.json", "w") as write_file:
                 json.dump(data, write_file,indent=3)
         except Exception as e:
-            print("Unable To Write into This File:", e)
+            logging.critical(e)
         
 
 
