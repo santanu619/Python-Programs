@@ -2,7 +2,7 @@
 @Author: Santanu Mohapatra
 @Date: 06/06/2021
 @Last Modified by: Santanu Mohapatra
-@Last Modified Time: 09:40 AM
+@Last Modified Time: 17:50 PM
 @Title: Clinique Management System
 '''
 
@@ -176,7 +176,7 @@ def clinique():
                     phone = phones("Enter patient number: ")
                     age = ages("Enter patient age: ")
                     clinique.addPatient(name, phone, age)
-                    patient_id = clinique.existingPatient("Nihar")
+                    patient_id = clinique.existingPatient(name)
                     clinique.printPatient()
                     choose_id = int(input("Please choose the ID of doctor to check for consultation: "))
                     clinique.makeAppointment(patient_id, choose_id)
