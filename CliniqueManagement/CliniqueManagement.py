@@ -178,7 +178,6 @@ def clinique():
                     clinic.addPatient(name, phone, age)
                     patient_id = clinic.existingPatient("Nihar")
                     clinic.printPatient()
-                    clinic.printDoctor()
                     choose_id = int(input("Please choose the ID of doctor to check for consultation: "))
                     clinic.makeAppointment(patient_id, choose_id)
 
@@ -186,7 +185,6 @@ def clinique():
                     name = names("Enter patient name: ")
                     patient_id = clinic.existingPatient(name)
                     clinic.printPatient()
-                    clinic.printDoctor()
                     choose_id = int(input("Please choose the ID of doctor to check for consultation: "))
                     clinic.makeAppointment(patient_id, choose_id)
 
