@@ -154,7 +154,7 @@ Description: clinique() function is considered as main function which is used to
 
 def clinique():
     try:
-        clinic = CliniqueManagement()
+        clinique = CliniqueManagement()
         user_input = ""
         print("|---------------------------------------------------------------|")
         print("***********    **************   ***********   **********")
@@ -175,24 +175,24 @@ def clinique():
                     name = names("Enter patient name: ")
                     phone = phones("Enter patient number: ")
                     age = ages("Enter patient age: ")
-                    clinic.addPatient(name, phone, age)
-                    patient_id = clinic.existingPatient("Nihar")
-                    clinic.printPatient()
+                    clinique.addPatient(name, phone, age)
+                    patient_id = clinique.existingPatient("Nihar")
+                    clinique.printPatient()
                     choose_id = int(input("Please choose the ID of doctor to check for consultation: "))
-                    clinic.makeAppointment(patient_id, choose_id)
+                    clinique.makeAppointment(patient_id, choose_id)
 
                 elif (user_input == "2"):
                     name = names("Enter patient name: ")
-                    patient_id = clinic.existingPatient(name)
-                    clinic.printPatient()
+                    patient_id = clinique.existingPatient(name)
+                    clinique.printPatient()
                     choose_id = int(input("Please choose the ID of doctor to check for consultation: "))
-                    clinic.makeAppointment(patient_id, choose_id)
+                    clinique.makeAppointment(patient_id, choose_id)
 
                 elif (user_input == "3"):
-                    clinic.printDoctor()
+                    clinique.printDoctor()
 
                 elif (user_input == "4"):
-                    clinic.save_to_json()
+                    clinique.save_to_json()
 
                 elif (user_input == "e"):
                     break
