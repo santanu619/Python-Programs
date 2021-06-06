@@ -1,0 +1,22 @@
+{
+    "patient": [
+        {
+            "name": "Nishruti",
+            "id": "1",
+            "phone_number": "8765434567",
+            "age": "25"
+        },
+        {
+            "name": "Ashutosh",
+            "id": "2",
+            "phone_number": "9090909090",
+            "age": "32"
+        },
+        {
+            "name": "Laxman",
+            "id": "3",
+            "phone_number": "8765343457",
+            "age": "12"
+        }
+    ]
+}
