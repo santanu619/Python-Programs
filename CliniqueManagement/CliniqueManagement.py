@@ -8,6 +8,7 @@
 
 import re
 import logging
+import os
 from Doctor import *
 from Patient import *
 from decouple import config

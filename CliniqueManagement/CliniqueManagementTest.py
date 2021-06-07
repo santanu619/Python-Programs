@@ -11,8 +11,14 @@ from Doctor import *
 from Patient import *
 
 class TestCliniqueManagement(unittest.TestCase):
-    def testFiles(self):
-
+   
+  
+    def test_files(self):
+        '''
+        Description: Test the attributes of the file.
+        Parameters: Json file attributes.
+        Return: None.
+        '''
         doctorList = Doctor()
         patientList = Patient()
         Doctors = doctorList.getDoctor()
@@ -23,9 +29,14 @@ class TestCliniqueManagement(unittest.TestCase):
         for index in Patients:
             list = Patients[index]
             self.assertEqual(len(list) == 2)
-
-    def insertRecordTest(self):
-        
+    
+   
+    def test_insertrecord(self):
+        '''
+        Description: Test the patient details that has been inserted to the file.
+        Parameters: Patient details.
+        Return: None.
+        '''
         patientList = Patient()
         patientList.addPatient("Santanu", "6294476499", "22")
         Patients = patientList.getPatient()
@@ -33,8 +44,12 @@ class TestCliniqueManagement(unittest.TestCase):
             list = Patients[index]
             self.assertEqual(len(list) == 3)
 
-    def makeAppointmentTest(self):
-
+    def test_appointment(self):
+        '''
+        Description: Test the appointment details to the file.
+        Parameters: appointment timing
+        Return: None.
+        '''
         patientList = Patient()
         doctorList = Doctor()
         patient_id = patientList.existingPatient("Nishruti")
@@ -46,3 +61,6 @@ class TestCliniqueManagement(unittest.TestCase):
                 dict = list[j]
                 if(dict['id'] == 1):
                     self.assertEqual(len(dict['patientList']) == 2)
+    if __name__ == "__main__":
+        unittest.main()     
+
