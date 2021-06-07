@@ -12,7 +12,7 @@ from Patient import *
 class Doctor:
 
     #Created a list to store the details of doctors
-    Doctor = {}
+    Doctors = {}
     def __init__(self):
         if os.path.isfile("Doctor.json"):
             with open("Doctor.json", "r") as f:
@@ -25,8 +25,8 @@ class Doctor:
     """
     def printDoctor(self):
        
-        for i in self.Doctor:
-            list = self.Doctor[i]
+        for i in self.Doctors:
+            list = self.Doctors[i]
             for j in range(len(list)):
                 dict = list[j]
                 print("------------------------------------------")
@@ -42,8 +42,8 @@ class Doctor:
     Return: None
     """
     def makeAppointment(self, patient_id, doctor_id):
-        for i in self.Doctor:
-            list = self.Doctor[i]
+        for i in self.Doctors:
+            list = self.Doctors[i]
             for j in range(len(list)):
                 dict = list[j]
                 if(dict['id'] == doctor_id):
@@ -60,7 +60,7 @@ class Doctor:
     """
     def save_to_json(self):
         with open("Doctors.json", "w") as f:
-                json.dump(self.Doctor, f, indent=4)
+                json.dump(self.Doctors, f, indent=4)
 
     def getDoctor(self):
-        return self.Doctor
+        return self.Doctors

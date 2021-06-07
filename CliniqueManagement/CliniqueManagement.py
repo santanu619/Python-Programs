@@ -25,16 +25,16 @@ Parameters: Regex pattern.
 Return: None.
 """
 def names(patient_name):
-        while True:
-            try:
-                name = input(patient_name)
-                pattern = "^[A-Z]{1}[a-zA-Z]{2,}$"
-                result = re.match(pattern, name)
-                if (result):
-                    return str(name)
-            except:
-                pass
-                logging.warning("Give correct Name!")
+    while True:
+        try:
+            name = input(patient_name)
+            pattern = "^[A-Z]{1}[a-zA-Z]{2,}$"
+            result = re.match(pattern, name)
+            if (result):
+                return str(name)
+        except:
+            pass
+            logging.warning("Give correct Name!")
 
 """
 Functions to enter the age of patient.

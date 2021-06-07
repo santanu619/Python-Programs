@@ -12,11 +12,11 @@ from Doctor import *
 
 class Patient:
     #Created a list to store the details of doctors
-    Patient = {}
+    Patients = {}
     def __init__(self):
         if os.path.isfile("Doctor.json"):
             with open("Patient.json", "r") as f:
-                self.Patient = json.load(f)
+                self.Patients = json.load(f)
 
     """
     Function to add patients in the database.
@@ -24,8 +24,8 @@ class Patient:
     Return type: None.
     """
     def addPatient(self, name, phone_number, age):
-        for i in self.Patient:
-            list = self.Patient[i]
+        for i in self.Patients:
+            list = self.Patients[i]
             dict = {}
             dict['name'] = name
             dict['id'] = len(list) + 1
@@ -38,8 +38,8 @@ class Patient:
     Return type: Patient name.
     """
     def existingPatient(self, name):
-        for i in self.Patient:
-            list = self.Patient[i]
+        for i in self.Patients:
+            list = self.Patients[i]
             for j in range(len(list)):
                 dict = list[j]
                 if (dict['name'] == name):
@@ -51,8 +51,8 @@ class Patient:
     Return: None.
     """
     def printPatient(self):
-       for i in self.Patient:
-            list = self.Patient[i]
+       for i in self.Patients:
+            list = self.Patients[i]
             for j in range(len(list)):
                 dict = list[j]
                 print("------------------------------------------")
@@ -66,7 +66,7 @@ class Patient:
     """
     def save_to_json(self):
         with open("Patient.json", "w") as f:
-                json.dump(self.Patient, f, indent=4)
+                json.dump(self.Patients, f, indent=4)
 
     def getPatient(self):
-        return self.Patient
+        return self.Patients
