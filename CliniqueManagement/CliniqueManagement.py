@@ -36,6 +36,8 @@ class CliniqueManagement:
                 self.Patient = json.load(f)
     """
     Function to add patients in the database.
+    Parameters: The attributes of the patient's json file are taken as parameters.
+    Return type: None.
     """
     def addPatient(self, name, phone_number, age):
        
@@ -51,6 +53,7 @@ class CliniqueManagement:
 
     """
     Function to check for existing patients in the database.
+    Return type: Patient name.
     """
     def existingPatient(self, name):
         for i in self.Patient:
@@ -86,6 +89,8 @@ class CliniqueManagement:
 
     """
     Functions to make appointment by the patients.
+    Parameters: List of existing and new patients.
+    Return: None
     """
     def makeAppointment(self, patient_id, doctor_id):
         for i in self.Doctor:
@@ -99,6 +104,11 @@ class CliniqueManagement:
                     else:
                         print("Sorry the slots are full.")              
 
+    """
+    Functions to save the entries into the json file.
+    Parameters: New Entries.
+    Return: None
+    """
     def save_to_json(self):
         with open("Doctors.json", "w") as f:
                 json.dump(self.Doctor, f, indent=4)
@@ -112,6 +122,11 @@ class CliniqueManagement:
     def getDoctor(self):
         return self.Doctor
 
+"""
+Functions to enter the name of patient.
+Parameters: Regex pattern.
+Return: None.
+"""
 def names(x):
     while True:
         try:
@@ -123,7 +138,11 @@ def names(x):
         except:
             pass
         logging.warning("Give correct Name!")
-
+"""
+Functions to enter the age of patient.
+Parameters: Regex pattern.
+Return: None.
+"""
 def ages(x):
     while True:
         try:
@@ -135,7 +154,11 @@ def ages(x):
         except:
             pass
         logging.warning("Avoid spaces between numbers")
-
+"""
+Functions to enter the phone number of patient.
+Parameters: Regex pattern.
+Return: None.
+"""
 def phones(x):
     while True:
         try:
@@ -150,6 +173,8 @@ def phones(x):
 
 """
 Description: clinique() function is considered as main function which is used to ask the entries by the users and make choices and here there is a admin login system and if the admin use correct login credentials, it will enter into the database of clinique management system.
+Paramters: All the objects of the json file and a choice constraint is considered as parameters.
+Return Type: None
 """        
 
 def clinique():
