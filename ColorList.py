@@ -6,6 +6,11 @@
 @Title: To print the first and last colour from the list.
 '''
 def first_last_colour():
+    '''
+    Description: Functions is used to print the first and last colour from the list.
+    Parameters: List of colours.
+    Return: None.
+    '''
     color_list = ["Red","Green","White" ,"Black"]
     print( "%s %s"%(color_list[0],color_list[-1]))
 
