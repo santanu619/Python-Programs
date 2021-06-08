@@ -61,6 +61,7 @@ class TestCliniqueManagement(unittest.TestCase):
                 dict = list[j]
                 if(dict['id'] == 1):
                     self.assertEqual(len(dict['patientList']) == 2)
-    if __name__ == "__main__":
-        unittest.main()     
+    
+if __name__ == "__main__":
+    unittest.main()     
 
