@@ -12,10 +12,12 @@ def concatenatelist(list):
     Parameters: List of numbers.
     Return: Result string.
     '''
-    result= ''
-    for element in list:
-        result += str(element)
-    return result
-
+    try:
+        result= ''
+        for element in list:
+            result += str(element)
+        return result
+    except ValueError as e:
+        print(e)
 if __name__=="__main__":
     print(concatenatelist([8, 5, 6, 9]))

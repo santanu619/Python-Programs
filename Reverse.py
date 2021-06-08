@@ -12,22 +12,26 @@ def user_firstname(fName):
     Parameters: firstName and the index value.
     Return: First Name in reverse order.
     '''
-    firstName = ""
-    for index in fName:
-        firstName = index + firstName
-    return firstName
-
+    try:
+        firstName = ""
+        for index in fName:
+            firstName = index + firstName
+        return firstName
+    except ValueError as e:
+        print(e)
 def user_lastname(lName):
     '''
     Description: This function is used to reverse the last name that has been given by the user.
     Parameters: lastName and the index value.
     Return: Last Name in reverse order.
     '''
-    lastName = ""
-    for index in lName:
-        lastName = index + lastName
-    return lastName
-
+    try:
+        lastName = ""
+        for index in lName:
+            lastName = index + lastName
+        return lastName
+    except ValueError as e:
+        print(e)
 if __name__ == "__main__":
     fName = input("Enter the First Name:\n")
     lName = input("Enter the Last Name:\n")

@@ -14,10 +14,12 @@ def calculate_days():
     Parameters: First date and last date.
     Return: None.
     '''
-    first_date = date(2014, 7, 2)
-    last_date = date(2014, 7, 11)
-    delta = last_date - first_date
-    print(delta.days)
-
+    try:
+        first_date = date(2014, 7, 2)
+        last_date = date(2014, 7, 11)
+        delta = last_date - first_date
+        print(delta.days)
+    except ValueError as e:
+        print(e)
 if __name__=="__main__":
     calculate_days()

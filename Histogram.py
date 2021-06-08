@@ -12,13 +12,15 @@ def histogram( items ):
     Parameters: List of numbers.
     Return: None.
     '''
-    for number in items:
-        pattern = ''
-        times = number
-        while( times > 0 ):
-          pattern += '@'
-          times = times - 1
-        print(pattern)
-
+    try:
+      for number in items:
+          pattern = ''
+          times = number
+          while( times > 0 ):
+            pattern += '@'
+            times = times - 1
+            print(pattern)
+    except ValueError as e:
+      print(e)
 if __name__=="__main__":
     histogram([3,8,5,4])

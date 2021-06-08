@@ -14,9 +14,11 @@ def calendar_monthyear():
     Parameters: Year and month.
     Return: None.
     '''
-    year = int(input("Input the year : "))
-    month = int(input("Input the month : "))
-    print(calendar.month(year, month))
-
+    try:
+        year = int(input("Input the year : "))
+        month = int(input("Input the month : "))
+        print(calendar.month(year, month))
+    except ValueError as e:
+        print(e)
 if __name__=="__main__":
     calendar_monthyear()

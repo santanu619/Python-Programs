@@ -11,8 +11,10 @@ def first_last_colour():
     Parameters: List of colours.
     Return: None.
     '''
-    color_list = ["Red","Green","White" ,"Black"]
-    print( "%s %s"%(color_list[0],color_list[-1]))
-
+    try:
+        color_list = ["Red","Green","White" ,"Black"]
+        print( "%s %s"%(color_list[0],color_list[-1]))
+    except ValueError as e:
+        print(e)
 if __name__=="__main__":
     first_last_colour()

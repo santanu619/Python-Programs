@@ -12,11 +12,13 @@ def check_groupMember(data_list, number):
     Parameters: List and the given number.
     Return: Return true if number exists or false.
     '''
-    for value in data_list:
-        if number == value:
-            return True
-    return False
-
+    try:
+        for value in data_list:
+            if number == value:
+                return True
+        return False
+    except ValueError as e:
+        print(e)
 if __name__=="__main__":
     print(check_groupMember([1, 5, 8, 3], 3))
     print(check_groupMember([1, 5, 8, 3], -1))
