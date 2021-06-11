@@ -3,7 +3,7 @@
 @Date: 10/06/2021
 @Last Modified by: Santanu Mohapatra
 @Last Modified Time: 20:10 PM
-@Title:Program to find common items between two lists.
+@Title:Program to find common item between two lists.
 '''
 import logging
 import loggerconfig
