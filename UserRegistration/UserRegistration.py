@@ -9,20 +9,8 @@ import logging
 import re
 
 
-class userRegistration:
+class UserRegistration:
     
-    def __init__(self):
-        '''
-        Descriptions: This init function is used to take the regex patterns.
-        Parameters: Regex pattern.
-        Return: None.
-        '''
-        self.firstname = "^[A-Z]{1}[a-zA-Z]{2,}$"
-        self.lastname = "^[A-Z]{1}[a-zA-Z]{2,}$"
-        self.email = "^[a-z0-9A-Z]+([._+-][a-z0-9A-Z]+)*[@][a-z0-9A-Z]+[.][a-zA-Z]{2,3}(.[a-zA-Z]{2})?$"
-        self.mobile = "^[0-9]{10}$"
-        self.password = "^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
-
     def getRegexUserRegistration(self):
         '''
         This function is used to get all other methods.
@@ -40,6 +28,7 @@ class userRegistration:
         Return: First Name.
         '''
         try:
+            self.firstname = "^[A-Z]{1}[a-zA-Z]{2,}$"
             if re.match(self.firstname, first_name):
                 logging.info("First Name is Valid.")
                 return True
@@ -58,6 +47,7 @@ class userRegistration:
         Return: Last Name.
         '''
         try:
+            self.lastname = "^[A-Z]{1}[a-zA-Z]{2,}$"
             if re.match(self.lastname, last_name):
                 logging.info("Last Name is Valid.")
                 return True
@@ -76,6 +66,7 @@ class userRegistration:
         Return: Email.
         '''
         try:
+            self.email = "^[a-z0-9A-Z]+([._+-][a-z0-9A-Z]+)*[@][a-z0-9A-Z]+[.][a-zA-Z]{2,3}(.[a-zA-Z]{2})?$"
             if re.match(self.email, e_mail):
                 logging.info("Email Id is Valid.")
                 return True
@@ -94,6 +85,7 @@ class userRegistration:
         Return: Mobile Number.
         '''
         try:
+            self.mobile = "^[0-9]{10}$"
             if re.match(self.mobile, mobile_number):
                 logging.info("Mobile Number is Valid.")
                 return True
@@ -112,6 +104,7 @@ class userRegistration:
         Return: Password.
         '''
         try:
+            self.password = "^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
             if re.match(self.password, user_password):
                 logging.info("Password is Valid.")
                 return True
@@ -124,6 +117,6 @@ class userRegistration:
             logging.error(e)
 
 if __name__=="__main__":
-    userregistration = userRegistration()
+    userregistration = UserRegistration()
     print("-----WELCOME TO USER REGISTRATION CELL-----")
     userregistration.getRegexUserRegistration()

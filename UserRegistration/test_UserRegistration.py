@@ -12,62 +12,62 @@ class Test_userRegistration:
 
     def test_first_name(self):
 
-        user = userRegistration()
+        user = UserRegistration()
         firstnametest = user.firstNameCheck("Santanu")
         assert firstnametest == True
 
     def test_last_name(self):
 
-         user = userRegistration()
+         user = UserRegistration()
          lastnametest = user.lastNameCheck("Mohapatra")
          assert lastnametest == True
 
     def test_email(self):
 
-         user = userRegistration()
+         user = UserRegistration()
          emailtest = user.eMailCheck("mohapatra.santanu123@gmail.com")
          assert emailtest == True
 
     def test_mobile(self):
 
-         user = userRegistration()
+         user = UserRegistration()
          mobiletest = user.mobileNumberCheck("8897654328")
          assert mobiletest == True
 
     def test_password(self):
 
-         user = userRegistration()
+         user = UserRegistration()
          passwordtest = user.passWordCheck("Guddu@123")
          assert passwordtest == True
 
     def test_first_name_negative(self):
 
-        user = userRegistration()
+        user = UserRegistration()
         firstnametestnegative = user.firstNameCheck("S")
-        assert firstnametestnegative == True
+        assert firstnametestnegative == False
 
     def test_last_name_negative(self):
 
-         user = userRegistration()
+         user = UserRegistration()
          lastnametestnegative = user.lastNameCheck("M")
-         assert lastnametestnegative == True
+         assert lastnametestnegative == False
 
     def test_email_negative(self):
 
-         user = userRegistration()
+         user = UserRegistration()
          emailtestnegative = user.eMailCheck("sdfgfh")
-         assert emailtestnegative == True
+         assert emailtestnegative == False
 
     def test_mobile_negative(self):
 
-         user = userRegistration()
+         user = UserRegistration()
          mobiletestnegative = user.mobileNumberCheck("88")
-         assert mobiletestnegative == True
+         assert mobiletestnegative == False
 
     def test_password_negative(self):
 
-         user = userRegistration()
+         user = UserRegistration()
          passwordtestnegative = user.passWordCheck("@123")
-         assert passwordtestnegative == True
+         assert passwordtestnegative == False
 
     
