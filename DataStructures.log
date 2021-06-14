@@ -9,3 +9,4 @@ CRITICAL:root:array() argument 1 must be a unicode character, not list
 CRITICAL:root:list.remove(x): x not in list
 CRITICAL:root:name 'dictionary' is not defined
 CRITICAL:root:name 'i' is not defined
+CRITICAL:root:'success'
